@@ -33,8 +33,7 @@ public class RentalAgreement {
 
     public void calculateCharges() {
         chargeDays = 0;
-        LocalDate currentDate = checkoutDate.plusDays(1); // Start from the day after checkout
-
+        LocalDate currentDate = checkoutDate.plusDays(1); 
         for (int i = 0; i < rentalDays; i++) {
             boolean isHoliday = HolidayUtil.isHoliday(currentDate);
             boolean isWeekend = isWeekend(currentDate);
